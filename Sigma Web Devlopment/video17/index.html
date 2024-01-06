@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* div{background-color: red;} */
+        .red{background-color: red;}
+        #green{color:green;}
+        div > p {
+            color: pink;
+        }
+        *{
+            margin: 0;
+            padding: 0;;
+        }
+        a:visited{color: yellow;}
+        a:link{color: greenyellow;}
+        a:active{background-color: red;}
+        a:hover{background-color: yellow;}
+    </style>
+</head>
+<body>
+    <div class="red">I am a DIV</div>
+    <div id="green">this is second div</div>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequatur ut facilis quidem. Voluptatem amet repellat ut in. Quam, enim.</p>
+        <h3>This is heading</h3>
+        <a href="https://www.google.com">Go to google</a>
+    </div>
+</body>
+</html>
