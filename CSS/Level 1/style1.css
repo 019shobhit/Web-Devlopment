@@ -1,0 +1,12 @@
+h2{
+    text-align: center;
+    text-decoration: underline;
+}
+p{
+    text-align:justify;
+    line-height: 36px;
+    text-transform: capitalize;
+}
+a{
+    text-decoration: none;
+}

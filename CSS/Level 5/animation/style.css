@@ -1,0 +1,32 @@
+div {
+    background-color: red;
+    border: 5px solid green;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+
+    animation: cccc 1s ease-in  infinite normal;
+}
+
+@keyframes cccc {
+    0%{
+        top: 0px;
+        left: 0px;
+    }
+    25%{
+        top: 0vh;
+        left: 93vw;
+    }
+    50%{
+        top: 85vh;
+        left: 93vw;
+    }
+    75%{
+        top: 85vh;
+        left: 0vw;
+    }
+    100%{
+        top: 0vh;
+        left: 0vh;
+    }
+}

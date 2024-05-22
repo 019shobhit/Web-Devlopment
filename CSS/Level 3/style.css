@@ -1,0 +1,44 @@
+/* html{
+    font-size: 30px;
+}
+#box1{
+    height: 50vh;
+    width: 50vw;
+    background-color: green;
+    font-size: 20px;
+}
+#box2{
+    height: 25vh;
+    background-color: red;
+    font-size: 2em;
+    width: 25vw;
+} */
+body{
+
+}
+
+div > div{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    margin: 20px;
+    display: inline-block;
+}
+#box1{
+    /* background-color: red; */
+    
+    background-image: url("nature.jpg");
+    background-size:cover;
+    height: 600px;
+    width: 300px;
+}
+#box2{
+    background-color: green;
+}
+#box3{
+    background-color: blue;
+}
+#box4{
+    background-color: pink;
+}
+
