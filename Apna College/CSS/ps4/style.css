@@ -1,0 +1,36 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+.bar{
+    background-color: black;
+    height: 60px;
+}
+button{
+    background-color: #f0880f;
+}
+#logo{
+    background-color: #f0880f;
+    font-size: 24px;
+}
+a{
+    margin-right:  200px;
+    text-decoration: none ;
+}
+
+.content{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    display: inline-block;
+    text-align: center;
+}
+#mainpart{
+    height: 633px;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+}

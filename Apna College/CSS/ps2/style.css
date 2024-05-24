@@ -1,0 +1,15 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+h3{
+    text-align: center;
+}
+p{
+    text-transform: capitalize;
+}
+#firstdiv{
+    font-size: 26px;
+}
+#seconddiv{
+    font-size: 10px;
+}
