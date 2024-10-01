@@ -1,0 +1,40 @@
+/* .rectangle{
+    height: 300px;
+    width: 100px;
+    background-color: black;
+}
+.circle{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border-radius: 50%;
+}
+#c1{
+background-color: red;
+}
+#c2{
+    background-color: yellow;
+}
+#c3{
+    background-color: green;
+} */
+*{
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+.bar{
+    background-color: black;
+    height: 60px;
+}
+button{
+    background-color: #f0880f;
+}
+#logo{
+    background-color: #f0880f;
+    font-size: 24px;
+}
+a{
+    margin-right:  200px;
+    text-decoration: none ;
+}

@@ -1,0 +1,17 @@
+/* div{
+    height: 150px;
+    width: 100px;
+    background-color: lightgoldenrodyellow;
+    border: 2px solid red;
+} */
+.content{
+    color: red;
+}
+.newClass{
+    background-color: lightgoldenrodyellow;
+    color: green;
+}
+.newClass2{
+    background-color: aqua;
+    color: red;
+}
