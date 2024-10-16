@@ -38,3 +38,45 @@
 // console.log();
 
 // OBJECT
+// let student = {
+//     name : "Shobhit",
+//     Rollno : 44,
+//     age : 22
+// };
+
+// const student = new Object;
+// student.name = "xyz";
+// student.rollNo = 44;
+// student.age = 22;
+
+// const student = {};
+// student.name = "xyz";
+// student.rollNo = 44;
+// student.age = 22;
+
+// console.log(typeof(student))
+// console.log(student);
+// console.log(student.name);
+// console.log(student.Rollno);
+// console.log(student.age);
+
+/// Array in javaScript
+
+// console.log("Try programiz.pro");
+// let items = [250, 645, 300, 900, 50];
+
+
+// let disItem = items.map(item => item - (item * 0.10));
+
+// console.log(sidItem);
+
+// let prices = [100, 200, 300, 400, 500];
+
+// let discountRate = 0.10;
+
+// for (let i = 0; i < prices.length; i++) {
+//     prices[i] = prices[i] * (1 - discountRate);
+// }
+// console.log(prices);
+
+// program to check string id palindrome or not
