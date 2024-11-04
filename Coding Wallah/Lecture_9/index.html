@@ -32,8 +32,8 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        input[type="submiot"]:hover{
-            background-color: #45a049;
+        input[type="submit"]:hover{
+            background-color: #f51f0c;
         }
     </style>
 </head>
@@ -60,8 +60,36 @@
         <label for="male">Male</label>
         <input type="radio" name="gender" id="gender" value="female">
         <label for="female">Female</label>
+        <input type="radio" name="gender" id="gender">
+        <label for="gender">Transgender</label>
+        <br> <br>
+        <label for="hobbies">Hobbies: </label>
+        <input type="checkbox" name="chess" id="chess">
+        <label for="chess">Chess</label>
+        <input type="checkbox" name="badmintion" id="badmintion">
+        <label for="badmintion">Badmintion</label>
+        <input type="checkbox" name="kabaddi" id="kabaddi">
+        <label for="kabaddi">Kabaddi</label>
 
-        
+        <br><br>
+        <label for="course">Select Course</label>
+        <select name ="course">
+            <option value="1">Java</option>
+            <option value="2">C++</option>
+            <option value="3">Python</option>
+            <option value="4">JavaScript</option>
+        </select>
+        <br><br>
+        <label for="image">Upload your Profile:</label>
+        <input type="file" name="image" id="image" accept="image/*">
+
+        <br><br>
+        <label for="comment">Give Your Valueable feedback</label>
+        <!-- <input type="text" name="comment" id="comment" placeholder="Enter your feedback"> -->
+         <textarea name="comment" id="comment" rows="3"></textarea>
+
+         <button type="submit">Submit</button>
+         <button type="reset">Reset</button>
     </form>
 </body>
 </html>

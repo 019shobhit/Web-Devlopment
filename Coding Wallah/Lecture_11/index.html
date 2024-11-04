@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        /* General body styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Form container styling */
+        form {
+            max-width: 400px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Heading styling */
+        h1 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Input and textarea styling */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        /* Hover effect for inputs */
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        /* Button styling */
+        button[type="submit"],
+        button[type="reset"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 1em;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        /* Submit and reset button color customization */
+        button[type="submit"] {
+            background-color: #4CAF50;
+        }
+
+        button[type="reset"] {
+            background-color: #d9534f;
+        }
+
+        /* Button hover effects */
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        button[type="reset"]:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="https://sheetdb.io/api/v1/8q65dtnpepdlq" method="post">
+        <h1>Fill Your Details</h1>
+        <input type="text" name="data[Name]" placeholder="Enter Your Name" required>
+        <input type="email" name="data[Email]" id="mail" placeholder="Enter Your Email" required>
+        <input type="number" name="data[Phone no.]" id="phone" placeholder="Enter Mobile Number" required>
+        <input type="text" name="data[Message]" placeholder="Enter Your Message" required>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+
+</html>
