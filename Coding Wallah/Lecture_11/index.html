@@ -98,7 +98,7 @@
 </head>
 
 <body>
-    <form action="https://sheetdb.io/api/v1/8q65dtnpepdlq" method="post">
+    <form id="sheetdb-form" action="https://sheetdb.io/api/v1/8q65dtnpepdlq" method="post">
         <h1>Fill Your Details</h1>
         <input type="text" name="data[Name]" placeholder="Enter Your Name" required>
         <input type="email" name="data[Email]" id="mail" placeholder="Enter Your Email" required>
@@ -107,6 +107,23 @@
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
     </form>
+
+    <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+            }).then(
+                response => response.json()
+            ).then((html) => {
+                alert('Submitted !! 😊 Thank you ' + document.getElementById('Name').value)
+                window.location.href = '';
+                location.reload();
+            });
+        });
+    </script>
 </body>
 
 </html>
