@@ -1,0 +1,11 @@
+// let date = new Date()
+// console.log(date)
+// console.log(date.toString())
+
+// console.log(date.toDateString())
+// console.log(date.toISOString())
+// console.log(date.toJSON())
+// console.log(date.toLocaleDateString())
+// console.log(date.toLocaleString())
+const myBirthDay = new Date(2002,6,19)
+console.log(myBirthDay.toDateString())
