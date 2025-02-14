@@ -1,0 +1,181 @@
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace IPO.Models.Masters
+{
+    [Table("client_master")]
+    public class ClientMasterModel
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int id { get; set; }
+
+        [DisplayName("Title")]
+        public string title { get; set; } = string.Empty;
+
+        [DisplayName("Symbol")]
+        public string symbol { get; set; } = string.Empty;
+
+        [DisplayName("BSE")]
+        public bool bse { get; set; }
+
+        [DisplayName("NSE")]
+        public bool nse { get; set; }
+
+        [DisplayName("Pre Issue Shares")]
+        public decimal preIssueShares { get; set; }
+
+        [DisplayName("Issue Size")]
+        public decimal issueSize { get; set; }
+
+        [DisplayName("Issue Price")]
+        public decimal issuePrice { get; set; }
+
+        [DisplayName("Post Issue Shares")]
+        public decimal postIssueShares { get; set; }
+
+        [DisplayName("Minimum Price")]
+        public decimal minimumPrice { get; set; }
+
+        [DisplayName("Face Value")]
+        public decimal faceValue { get; set; }
+
+        [DisplayName("Premium")]
+        public decimal premium { get; set; }
+
+        [DisplayName("Fixed Price")]
+        public bool fixedPrice { get; set; }
+
+        [DisplayName("Lot Size")]
+        public int lotSize { get; set; }
+
+        [DisplayName("Open Date")]
+        [DataType(DataType.Date)]
+        public DateTime openDate { get; set; }
+
+        [DisplayName("Close Date")]
+        [DataType(DataType.Date)]
+        public DateTime closeDate { get; set; }
+
+        [DisplayName("Offer Docu. Date")]
+        [DataType(DataType.Date)]
+        public DateTime offerDocumentDate { get; set; }
+
+        [DisplayName("Active ISIN")]
+        public string? activeISIN { get; set; } = string.Empty;
+
+        [DisplayName("Corporate Identity Number")]
+        public string? corporateIdentityNumber { get; set; } = string.Empty;
+
+        [DisplayName("Address")]
+        public string? address { get; set; } = string.Empty;
+
+        [Column("application_processing_fees_per_application_nsm")]
+        public decimal? ApplicationProcessingFeesPerApplicationNSM { get; set; }
+
+        [Column("application_processing_fees_per_application_sm")]
+        public decimal? ApplicationProcessingFeesPerApplicationSM { get; set; }
+
+        [Column("application_processing_fees_per_application_upi")]
+        public decimal? ApplicationProcessingFeesPerApplicationUPI { get; set; }
+
+        [Column("brokerage_percentage_on_processed_amount_nsm")]
+        public decimal? BrokeragePercentageOnProcessedAmountNSM { get; set; }
+
+        [Column("brokerage_percentage_on_processed_amount_sm")]
+        public decimal? BrokeragePercentageOnProcessedAmountSM { get; set; }
+
+        [Column("brokerage_percentage_on_processed_amount_upi")]
+        public decimal? BrokeragePercentageOnProcessedAmountUPI { get; set; }
+
+        public List<ClientMarketMaker> marketMakers { get; set; } = new List<ClientMarketMaker>();
+        public List<ClientMasterSignatories> signatories { get; set; } = new List<ClientMasterSignatories>();
+        public List<ClientMasterMerchantBanker> merchantBankers { get; set; } = new List<ClientMasterMerchantBanker>();
+        public List<ClientMasterCollectionBankers> collectionBankers { get; set; } = new List<ClientMasterCollectionBankers>();
+        public List<ClientMasterCategories> categories { get; set; } = new List<ClientMasterCategories>();
+    }
+
+    [Table("client_market_maker")]
+    public class ClientMarketMaker
+    {
+        [Key]
+        [Column("id")]
+        public int Id { get; set; }
+
+        [Column("name")]
+        public string Name { get; set; } = string.Empty;
+
+        [Column("qty")]
+        public int Qty { get; set; }
+
+        [Column("amount")]
+        public decimal Amount { get; set; }
+
+        [Column("pan")]
+        public string PAN { get; set; } = string.Empty;
+
+        [Column("client_master_id")]
+        public int ClientMasterId { get; set; }
+        public ClientMasterModel? ClientMasterModel { get; set; }
+    }
+
+    [Table("client_signatories")]
+    public class ClientMasterSignatories
+    {
+        [Key]
+        public int id { get; set; }
+        public string type { get; set; } = string.Empty;
+        public string? contactName { get; set; }
+        public string? designation { get; set; }
+        public string? email { get; set; }
+        public string? mobile { get; set; }
+
+        public int clientMasterId { get; set; }
+        public ClientMasterModel? clientMasterModel { get; set; }
+    }
+
+    [Table("client_merchant_banker")]
+    public class ClientMasterMerchantBanker
+    {
+        [Key]
+        public int id { get; set; }
+
+        [Column("client_master_id")]
+        public int clientMasterId { get; set; }
+        public ClientMasterModel? clientMasterModel { get; set; }
+
+        public string name { get; set; } = string.Empty;
+        public string address { get; set; } = string.Empty;
+
+        [Column("contact_person")]
+        public string contactPerson { get; set; } = string.Empty;
+        public string mobile { get; set; } = string.Empty;
+        public string email { get; set; } = string.Empty;
+    }
+
+    [Table("client_collection_bankers")]
+    public class ClientMasterCollectionBankers
+    {
+        [Key]
+        public int id { get; set; }
+        public string name { get; set; } = string.Empty;
+        public string? accountNumber { get; set; }
+        public string? ifscCode { get; set; }
+        public string? ipoAccountName { get; set; }
+        public string? address { get; set; }
+        public int clientMasterId { get; set; }
+        public ClientMasterModel? clientMasterModel { get; set; }
+    }
+
+    [Table("client_categories")]
+    public class ClientMasterCategories
+    {
+        [Key]
+        public int id { get; set; }
+        public string categoryCode { get; set; } = string.Empty;
+        public int shares { get; set; }
+        public int clientMasterId { get; set; }
+        public ClientMasterModel? clientMasterModel { get; set; }
+    }
+}
