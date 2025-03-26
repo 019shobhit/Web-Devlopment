@@ -55,7 +55,7 @@ const shopingcart =[
 ]
 
 const price = shopingcart.reduce((acc,utem)=> acc+utem.price,0);
-console.log(price)
+console.log(price) 
 
 
 
