@@ -2,9 +2,9 @@ import React from 'react'
 
 const NavBar = () => {
   return (
-    <div className='flex '>
-        <h4>Target Audience</h4>
-        <button>digital Banking Platform</button>
+    <div className='flex items-center justify-between py-8 px-18 '>
+      <h4 className='bg-black text-white py-2 px-8 rounded-full uppercase text'>Target Audience</h4>
+      <button className='bg-gray-200 px-6 py-2 uppercase rounded-full tracking-widest text-sm'>digital Banking Platform</button>
     </div>
   )
 }

@@ -1,11 +1,12 @@
 import React from 'react'
 import NavBar from './NavBar'
+import Page1Context from './Page1Context'
 
-const Section1 = () => {
+const Section1 = (props) => {
   return (
-    <div className='h-screen w-full bg-blue-500'>
-      Section 1
-      <NavBar/>
+    <div className='h-screen w-full'>
+      <NavBar />
+      <Page1Context user={props.user}/>
     </div>
   )
 }
